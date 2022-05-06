@@ -1,0 +1,418 @@
+/*------------------------------------ Reset CSS----------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*------------------------------------ Base CSS----------------------------*/
+:root {
+    /* Color */
+    --primary-color: #fa5b0f;
+    --text-color: #444;
+    --bg-pink: rgb(255, 251, 249);
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+/*------------------------------------ Header----------------------------*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 5rem;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.09);
+    z-index: 10;
+}
+
+.header-logo {
+    margin: 0;
+    font-size: 2.25rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.header-logo span {
+    color: var(--primary-color);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-item__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.nav-item__link:hover {
+    color: var(--primary-color);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.close-btn {
+    font-size: 2rem;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+/*------------------------------------ Side drawer----------------------------*/
+#side-drawer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.aside-header {
+    height: 5rem;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-side-drawer {
+    display: block !important;
+}
+
+#side-drawer nav {
+    display: block;
+}
+
+#side-drawer .nav-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+#side-drawer .nav-item {
+    margin-bottom: 1.5rem;
+}
+
+/*------------------------------------ Hero----------------------------*/
+#hero {
+    margin-top: 5rem;
+    height: 54.625rem;
+    background: url('https://wallpaperaccess.com/full/791680.jpg') no-repeat center /cover;
+    position: relative;
+}
+
+.hero-title {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+}
+
+/*------------------------------------ Section CSS----------------------------*/
+.section-container {
+    padding: 3rem 10%;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin: 0 0 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*------------------------------------ About----------------------------*/
+#about {
+    background: url(https://html.creativegigstf.com/vCamp/img/bg_02.png) no-repeat center /cover;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-img {
+    margin-right: 4rem;
+}
+
+.about-img img {
+    width: 100%;
+    height: 24rem;
+    object-fit: contain;
+}
+
+.about-desc {
+    margin-left: auto;
+    font-size: 1.125rem;
+    line-height: 2rem;
+}
+
+/*------------------------------------ Projects----------------------------*/
+#projects {
+    background-color: var(--bg-pink);
+}
+
+.projects-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 0;
+}
+
+.projects-item {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    box-shadow: rgb(0, 0, 0) 2px 2px 0px;
+    cursor: pointer;
+}
+
+
+.projects-item__icon {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.projects-item__name {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.projects-item__desc {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/*------------------------------------ Achivements----------------------------*/
+#achivements {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+#achivements::after {
+    content: "";
+    display: block;
+    background: url('https://marketifythemes.net/html/arlo/img/patterns/ravenna.png') repeat center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.achievements-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.achivements-item {
+    text-align: center;
+}
+
+.achivements-item__qty {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+.achivements-item__name {
+    font-size: 1.125rem;
+}
+
+/*------------------------------------ Contact----------------------------*/
+#contact {
+    background-color: var(--bg-pink);
+}
+
+.contact-input-wrap {
+    width: 100%;
+}
+
+.contact-input {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 34.375rem;
+    max-width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.contact-btn {
+    display: block;
+    margin: auto;
+    padding: 1.125rem 1.75rem;
+    font-size: 1.125rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    color: #fff;
+    background-color: var(--primary-color);
+    transition: all 0.2s;
+}
+
+.contact-btn:hover {
+    color: var(--primary-color);
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/*------------------------------------ Footer----------------------------*/
+#footer {
+    height: 5rem;
+    padding: 0 5%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    color: #fff;
+    font-size: 1.125rem;
+    opacity: 0.7;
+}
+
+.footer-socials__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.7;
+    margin-right: 1rem;
+    transition: all 0.2s;
+}
+
+.footer-socials__link:hover {
+    opacity: 1;
+}
+
+/*------------------------------------ Responsive----------------------------*/
+/* Mobile & Tablet*/
+@media screen and (max-width: 75rem) {
+    nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-img {
+        margin: 0 auto 1.5rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 48.063rem) and (max-width: 75rem) {
+
+    .projects-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 48rem) {
+
+    /* Section */
+    .section-container {
+        padding: 3rem 5%;
+    }
+
+    .section-header {
+        font-size: 2.5rem;
+    }
+
+    /* Project */
+    .projects-list {
+        grid-template-columns: 100%;
+    }
+
+    /* Achivements */
+    .achievements-list {
+        flex-direction: column;
+    }
+
+    .achivements-item__name {
+        margin: 0.2rem 0 2rem;
+    }
+
+    /* Contact */
+    .contact-input {
+        padding: 1rem 1.2rem;
+    }
+
+    .contact-btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    #footer {
+        height: 12rem;
+        padding: 1rem 1rem;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .footer-socials__link {
+        font-size: 2rem;
+        margin-right: 2rem;
+    }
+}
